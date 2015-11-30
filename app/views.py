@@ -17,5 +17,5 @@ def index():
  stdout2,error2 = cmd2.communicate()
  sar = stdout2.splitlines() 
    
- return render_template('view.html', memory=memory, uptime=uptime, sar=sar) 
+ return render_template('index.html', memory=memory, uptime=uptime, sar=sar) 
  
