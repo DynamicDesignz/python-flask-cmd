@@ -5,7 +5,7 @@ from app import app
 @app.route('/')
 def index():
  import subprocess
- cmd = subprocess.Popen(['ps_mem'],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+ cmd = subprocess.Popen(['sudo', './ps_mem'],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
  stdout,error = cmd.communicate()
  memory = stdout.splitlines()
  
